@@ -19,8 +19,8 @@ dockerfiles/build.sh
 ### コンテナを起動する
 
 ```sh
-# /path/to/monitor ディレクトリを監視する例
-docker run -d --restart unless-stopped --name ts2ass-monitor -v /path/to/monitor/:/app/monitor/ 68fpjc/ts2ass-monitor:latest
+# /path/to/recorded ディレクトリを監視する例
+docker run -d --restart unless-stopped --name ts2ass-monitor -v /path/to/recorded/:/app/monitor/ 68fpjc/ts2ass-monitor:latest
 ```
 
 以上
