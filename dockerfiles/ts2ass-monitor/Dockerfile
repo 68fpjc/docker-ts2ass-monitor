@@ -1,4 +1,4 @@
-FROM python:2.7-slim-buster
+FROM python:3.11-slim
 RUN : \
    && set -x \
    && apt-get update \
@@ -12,7 +12,7 @@ RUN : \
    && cd /app/arib/ \
    && curl -L https://github.com/johnoneil/arib/tarball/master \
    | tar -zx --strip-components=1 \
-   && pip2 install -e . \
+   && pip install -e . \
    \
    && mkdir -p /app/monitor/ \
    && DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends inotify-tools \
